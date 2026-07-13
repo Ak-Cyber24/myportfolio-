@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABHISHEK | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        accent: '#06b6d4',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fontsource/fontsource@main/css/fontsource.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="text-2xl font-bold gradient-text tracking-tight">AK</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Home</a>
+                <a href="#about" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">About</a>
+                <a href="#education" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Education</a>
+                <a href="#skills" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Skills</a>
+                <a href="#experience" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Experience</a>
+                <a href="#projects" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Projects</a>
+                <a href="#contact" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors">Contact</a>
+                <a href="#contact" class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white">Let's Talk</a>
+            </div>
+            <button class="md:hidden text-white text-2xl" id="menuBtn">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu fixed top-0 right-0 w-72 h-full bg-slate-900/95 backdrop-blur-xl z-50 p-8 md:hidden" id="mobileMenu">
+            <button class="absolute top-4 right-4 text-white text-2xl" id="closeMenuBtn">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="flex flex-col gap-6 mt-12">
+                <a href="#home" class="text-lg font-medium text-gray-300 hover:text-white transition-colors mobile-link">Home</a>
+                <a href="#about" class="text-lg font-medium text-gray-300 hover:text-white transition-colors mobile-link">About</a>
+                <a href="#education" class="text-lg font-medium text-gray-300 hover:text-white transition-colors mobile-link">Education</a>
+                <a href="#skills" class="text-lg font-medium text-gray-300 hover:text-white transition-colors mobile-link">Skills</a>
+                <a href="#experience" class="text-lg font-medium text-gray-300 hover:text-white transition-colors mobile-link">Experience</a>
+                <a href="#projects" class="text-lg font-medium text-gray-300 hover:text-white transition-colors mobile-link">Projects</a>
+                <a href="#contact" class="text-lg font-medium text-gray-300 hover:text-white transition-colors mobile-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center relative hero-gradient overflow-hidden">
+        <!-- Animated Background Particles -->
+        <div class="absolute inset-0" id="particles"></div>
+
+        <div class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-8">
+                <div class="space-y-3">
+                    <p class="text-accent font-medium tracking-wider uppercase text-sm animate-on-scroll"> Welcome to my portfolio</p>
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight animate-on-scroll">
+                        Hi, I'm<br>
+                        <span class="gradient-text">ABHISHEK</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-400 font-light animate-on-scroll">
+                        Full-Stack Software Engineer
+                    </p>
+                </div>
+                <p class="text-gray-400 text-lg leading-relaxed max-w-lg animate-on-scroll">
+                    Passionate about building elegant solutions to complex problems. I specialize in creating scalable web applications and distributed systems with modern technologies.
+                </p>
+                <div class="flex flex-wrap gap-4 animate-on-scroll">
+                    <a href="#projects" class="btn-primary px-8 py-3 rounded-full text-white font-semibold inline-flex items-center gap-2">
+                        View My Work <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="ak.pdf" class="btn-outline px-8 py-3 rounded-full text-white font-semibold inline-flex items-center gap-2">
+                        <i class="ri-download-line"></i> Download CV
+                    </a>
+                </div>
+                <div class="flex items-center gap-6 pt-4 animate-on-scroll">
+                    <a href="https://github.com/Ak-Cyber24" class="text-gray-400 hover:text-primary transition-colors text-2xl"><i class="ri-github-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/abhishek9889/" class="text-gray-400 hover:text-primary transition-colors text-2xl"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors text-2xl"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors text-2xl"><i class="ri-mail-fill"></i></a>
+                </div>
+            </div>
+            <div class="flex justify-center relative">
+                <div class="relative floating">
+                    <div class="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl">
+                        <img src="we.jpeg" alt="ABHISHEK" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -top-4 -right-4 glass-card rounded-2xl px-4 py-3 floating-delay">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                            <span class="text-sm font-medium text-gray-300">Available for hire</span>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 glass-card rounded-2xl px-4 py-3 floating">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">🚀</span>
+                            <div>
+                                <p class="text-sm font-bold text-white">3+ Years</p>
+                                <p class="text-xs text-gray-400">Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+            <span class="text-xs text-gray-500">Scroll Down</span>
+            <i class="ri-arrow-down-line text-gray-500 text-xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <p class="text-primary font-medium tracking-wider uppercase text-sm mb-3">Get to know me</p>
+                <h2 class="text-4xl md:text-5xl font-bold">About <span class="gradient-text">Me</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6 animate-on-scroll from-left">
+                    <h3 class="text-2xl font-semibold text-white">A passionate developer who loves building things that live on the internet.</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        I'm a software engineer based in San Francisco with over 5 years of experience in full-stack development. I have a deep passion for creating intuitive, dynamic, and scalable applications that make a real difference.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        My journey in tech started during college when I built my first web application. Since then, I've had the privilege of working at innovative startups and established tech companies, contributing to products used by millions.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        When I'm not coding, you can find me exploring hiking trails, reading about emerging technologies, or contributing to open-source projects.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-4">
+                        <span class="tag px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">🎯 Problem Solver</span>
+                        <span class="tag px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium"> Team Player</span>
+                        <span class="tag px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium">📚 Continuous Learner</span>
+                        <span class="tag px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium">💡 Creative Thinker</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 animate-on-scroll">
+                    <div class="glass-card rounded-2xl p-6 text-center space-y-2 hover:border-primary/40 transition-colors">
+                        <div class="text-3xl font-bold gradient-text counter" data-target="50">0</div>
+                        <p class="text-gray-400 text-sm">Projects Completed</p>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 text-center space-y-2 hover:border-primary/40 transition-colors">
+                        <div class="text-3xl font-bold gradient-text counter" data-target="5">0</div>
+                        <p class="text-gray-400 text-sm">Years Experience</p>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 text-center space-y-2 hover:border-primary/40 transition-colors">
+                        <div class="text-3xl font-bold gradient-text counter" data-target="30">0</div>
+                        <p class="text-gray-400 text-sm">Happy Clients</p>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 text-center space-y-2 hover:border-primary/40 transition-colors">
+                        <div class="text-3xl font-bold gradient-text counter" data-target="12">0</div>
+                        <p class="text-gray-400 text-sm">Open Source Repos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 animate-on-scroll">
+                <p class="text-primary font-medium tracking-wider uppercase text-sm mb-3">Academic Background</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Education</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 timeline-line transform md:-translate-x-0.5"></div>
+
+                    <!-- Education Item 1 -->
+                    <div class="relative flex items-start gap-8 mb-12 animate-on-scroll">
+                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-dark z-10 mt-6"></div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right pl-16 md:pl-0">
+                            <div class="glass-card rounded-2xl p-6 hover:border-primary/40 transition-all duration-300 hover:transform hover:-translate-y-1">
+                                <div class="flex items-center gap-2 md:justify-end mb-2">
+                                    <span class="text-accent text-sm font-medium">2021 — 2026</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-1">B-TECH Computer Science</h3>
+                                <p class="text-primary font-medium mb-2">Stanford University</p>
+                                <p class="text-gray-400 text-sm leading-relaxed">Specialized in Distributed Systems and Machine Learning. GPA: 3.9/4.0. Published 3 research papers in top-tier conferences.</p>
+                                <div class="flex flex-wrap gap-2 mt-3 md:justify-end">
+                                    <span class="text-xs px-2 py-1 rounded bg-primary/10 text-primary">ML/AI</span>
+                                    <span class="text-xs px-2 py-1 rounded bg-accent/10 text-accent">Research</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="relative flex items-start gap-8 mb-12 animate-on-scroll">
+                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-dark z-10 mt-6"></div>
+                        <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
+                        <div class="md:w-1/2 md:pl-12 pl-16">
+                            <div class="glass-card rounded-2xl p-6 hover:border-secondary/40 transition-all duration-300 hover:transform hover:-translate-y-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="text-accent text-sm font-medium">20221 — 2026</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-1">B-Tech Computer Science</h3>
+                                <p class="text-secondary font-medium mb-2">UC Berkeley</p>
+                                <p class="text-gray-400 text-sm leading-relaxed">Dean's List all semesters. Captain of the ACM programming team. Led a team of 4 to win the regional ICPC competition.</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <span class="text-xs px-2 py-1 rounded bg-secondary/10 text-secondary">Dean's List</span>
+                                    <span class="text-xs px-2 py-1 rounded bg-accent/10 text-accent">ICPC Winner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 3 -->
+                    <div class="relative flex items-start gap-8 animate-on-scroll">
+                        <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-dark z-10 mt-6"></div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right pl-16 md:pl-0">
+                            <div class="glass-card rounded-2xl p-6 hover:border-accent/40 transition-all duration-300 hover:transform hover:-translate-y-1">
+                                <div class="flex items-center gap-2 md:justify-end mb-2">
+                                    <span class="text-accent text-sm font-medium">2026</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-1">AWS Solutions Architect</h3>
+                                <p class="text-accent font-medium mb-2">Amazon Web Services</p>
+                                <p class="text-gray-400 text-sm leading-relaxed">Professional certification in designing distributed systems and architectures on AWS cloud platform.</p>
+                                <div class="flex flex-wrap gap-2 mt-3 md:justify-end">
+                                    <span class="text-xs px-2 py-1 rounded bg-accent/10 text-accent">Cloud</span>
+                                    <span class="text-xs px-2 py-1 rounded bg-primary/10 text-primary">AWS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <p class="text-primary font-medium tracking-wider uppercase text-sm mb-3">What I'm good at</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Technical <span class="gradient-text">Skills</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Frontend -->
+                <div class="glass-card rounded-2xl p-8 animate-on-scroll hover:border-primary/40 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary text-xl">
+                            <i class="ri-layout-masonry-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Frontend Development</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">React / Next.js</span>
+                                <span class="text-sm text-primary">95%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-primary to-secondary rounded-full" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">TypeScript</span>
+                                <span class="text-sm text-primary">92%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-primary to-secondary rounded-full" data-width="92%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">Vue.js / Nuxt</span>
+                                <span class="text-sm text-primary">85%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-primary to-secondary rounded-full" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">CSS / Tailwind / SCSS</span>
+                                <span class="text-sm text-primary">90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-primary to-secondary rounded-full" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="glass-card rounded-2xl p-8 animate-on-scroll hover:border-secondary/40 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary text-xl">
+                            <i class="ri-server-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Backend Development</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">Node.js / Express</span>
+                                <span class="text-sm text-secondary">93%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-secondary to-accent rounded-full" data-width="93%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">Python / Django</span>
+                                <span class="text-sm text-secondary">88%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-secondary to-accent rounded-full" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">Go / Gin</span>
+                                <span class="text-sm text-secondary">80%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-secondary to-accent rounded-full" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">GraphQL / REST APIs</span>
+                                <span class="text-sm text-secondary">91%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-secondary to-accent rounded-full" data-width="91%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Cloud -->
+                <div class="glass-card rounded-2xl p-8 animate-on-scroll hover:border-accent/40 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-accent text-xl">
+                            <i class="ri-database-2-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Database & Cloud</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">PostgreSQL / MongoDB</span>
+                                <span class="text-sm text-accent">90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-accent to-primary rounded-full" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">Redis / Elasticsearch</span>
+                                <span class="text-sm text-accent">85%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-accent to-primary rounded-full" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">AWS / GCP</span>
+                                <span class="text-sm text-accent">87%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-accent to-primary rounded-full" data-width="87%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">Docker / Kubernetes</span>
+                                <span class="text-sm text-accent">88%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-accent to-primary rounded-full" data-width="88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="glass-card rounded-2xl p-8 animate-on-scroll hover:border-primary/40 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 text-xl">
+                            <i class="ri-tools-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Tools & DevOps</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">Git / GitHub Actions</span>
+                                <span class="text-sm text-green-400">95%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-green-400 to-accent rounded-full" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">CI/CD Pipelines</span>
+                                <span class="text-sm text-green-400">88%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-green-400 to-accent rounded-full" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">Terraform / Ansible</span>
+                                <span class="text-sm text-green-400">78%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-green-400 to-accent rounded-full" data-width="78%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-gray-300">Jest / Cypress / Playwright</span>
+                                <span class="text-sm text-green-400">90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="skill-bar h-full bg-gradient-to-r from-green-400 to-accent rounded-full" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Icons -->
+            <div class="mt-16 animate-on-scroll">
+                <h3 class="text-center text-lg font-medium text-gray-400 mb-8">Tech Stack</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-reactjs-line text-xl text-blue-400"></i> React
+                    </span>
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-vuejs-line text-xl text-green-400"></i> Vue.js
+                    </span>
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-code-s-slash-line text-xl text-blue-300"></i> TypeScript
+                    </span>
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-nodejs-line text-xl text-green-500"></i> Node.js
+                    </span>
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-python-line text-xl text-yellow-400"></i> Python
+                    </span>
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-terminal-box-line text-xl text-cyan-400"></i> Go
+                    </span>
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-database-2-line text-xl text-blue-500"></i> PostgreSQL
+                    </span>
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-leaf-line text-xl text-green-500"></i> MongoDB
+                    </span>
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-cloud-line text-xl text-orange-400"></i> AWS
+                    </span>
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-docker-line text-xl text-blue-500"></i> Docker
+                    </span>
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-kubernetes-line text-xl text-blue-400"></i> Kubernetes
+                    </span>
+                    <span class="tag glass-card px-5 py-3 rounded-xl text-gray-300 font-medium flex items-center gap-2 hover:text-primary cursor-default">
+                        <i class="ri-redis-line text-xl text-red-400"></i> Redis
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/5 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 animate-on-scroll">
+                <p class="text-primary font-medium tracking-wider uppercase text-sm mb-3">My Career Path</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Work <span class="gradient-text">Experience</span></h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- Experience 1 -->
+                <div class="glass-card rounded-2xl p-8 animate-on-scroll hover:border-primary/40 transition-all duration-300 group">
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Senior Software Engineer</h3>
+                            <p class="text-primary font-medium mt-1">Google</p>
+                        </div>
+                        <span class="text-sm text-gray-400 bg-slate-800 px-3 py-1 rounded-full whitespace-nowrap">Jan 2023 — Present</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Leading a team of 6 engineers building next-generation cloud infrastructure tools. Architected a microservices platform serving 10M+ daily requests with 99.99% uptime. Reduced system latency by 40% through optimization of distributed caching layers.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Go</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Kubernetes</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">gRPC</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Cloud Spanner</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Leadership</span>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="glass-card rounded-2xl p-8 animate-on-scroll hover:border-secondary/40 transition-all duration-300 group">
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-secondary transition-colors">Full-Stack Engineer</h3>
+                            <p class="text-secondary font-medium mt-1">Stripe</p>
+                        </div>
+                        <span class="text-sm text-gray-400 bg-slate-800 px-3 py-1 rounded-full whitespace-nowrap">Jun 2021 — Dec 2022</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Developed and maintained payment processing features handling $50B+ annually. Built real-time fraud detection dashboard using React and D3.js. Implemented CI/CD pipelines reducing deployment time by 60%.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 rounded-full bg-secondary/10 text-secondary">React</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-secondary/10 text-secondary">Ruby</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-secondary/10 text-secondary">PostgreSQL</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-secondary/10 text-secondary">Redis</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-secondary/10 text-secondary">D3.js</span>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="glass-card rounded-2xl p-8 animate-on-scroll hover:border-accent/40 transition-all duration-300 group">
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">Software Engineer</h3>
+                            <p class="text-accent font-medium mt-1">Airbnb</p>
+                        </div>
+                        <span class="text-sm text-gray-400 bg-slate-800 px-3 py-1 rounded-full whitespace-nowrap">Jul 2019 — May 2021</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Built search ranking algorithms improving booking conversion by 15%. Developed A/B testing framework used across 20+ product teams. Contributed to the design system adopted by 50+ engineers globally.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent">Python</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent">React</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent">Elasticsearch</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent">AWS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <p class="text-primary font-medium tracking-wider uppercase text-sm mb-3">Featured Work</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Project <span class="gradient-text">Experience</span></h2>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 animate-on-scroll">
+                <button class="filter-btn active px-6 py-2 rounded-full text-sm font-medium transition-all" data-filter="all">All</button>
+                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all" data-filter="frontend">Frontend</button>
+                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all" data-filter="backend">Backend</button>
+                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all" data-filter="ml">ML/AI</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectGrid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden animate-on-scroll group" data-category="fullstack">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center">
+                            <i class="ri-shopping-cart-2-line text-6xl text-primary/50 group-hover:text-primary transition-colors"></i>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-dark/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-github-fill"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-external-link-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs px-2 py-1 rounded bg-primary/10 text-primary">Full-Stack</span>
+                            <span class="text-xs px-2 py-1 rounded bg-accent/10 text-accent">E-Commerce</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">CloudMart</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">A full-featured e-commerce platform with real-time inventory, AI-powered recommendations, and seamless payment processing.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-gray-500">Next.js</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">Node.js</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">PostgreSQL</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden animate-on-scroll group" data-category="ml">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-accent/30 to-green-500/30 flex items-center justify-center">
+                            <i class="ri-robot-2-line text-6xl text-accent/50 group-hover:text-accent transition-colors"></i>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-dark/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-github-fill"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-external-link-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs px-2 py-1 rounded bg-accent/10 text-accent">ML/AI</span>
+                            <span class="text-xs px-2 py-1 rounded bg-primary/10 text-primary">NLP</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-accent transition-colors">SentimentAI</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Real-time sentiment analysis API using transformer models. Processes 100K+ requests daily with 94% accuracy across 12 languages.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-gray-500">Python</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">PyTorch</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">FastAPI</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">Redis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden animate-on-scroll group" data-category="frontend">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-secondary/30 to-pink-500/30 flex items-center justify-center">
+                            <i class="ri-bar-chart-grouped-line text-6xl text-secondary/50 group-hover:text-secondary transition-colors"></i>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-dark/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 rounded-fle
+                            ull bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-github-fill"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-external-link-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs px-2 py-1 rounded bg-secondary/10 text-secondary">Frontend</span>
+                            <span class="text-xs px-2 py-1 rounded bg-green-500/10 text-green-400">Dashboard</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-secondary transition-colors">DataViz Pro</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Interactive data visualization dashboard with real-time streaming charts, custom widgets, and collaborative annotation features.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-gray-500">React</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">D3.js</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">WebSocket</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden animate-on-scroll group" data-category="backend">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-orange-500/30 to-red-500/30 flex items-center justify-center">
+                            <i class="ri-chat-3-line text-6xl text-orange-400/50 group-hover:text-orange-400 transition-colors"></i>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-dark/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-github-fill"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-external-link-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs px-2 py-1 rounded bg-orange-500/10 text-orange-400">Backend</span>
+                            <span class="text-xs px-2 py-1 rounded bg-primary/10 text-primary">Real-time</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">ChatFlow</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Scalable real-time messaging platform supporting 1M+ concurrent connections with end-to-end encryption and media sharing.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-gray-500">Go</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">gRPC</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">MongoDB</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">Kafka</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden animate-on-scroll group" data-category="fullstack">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-green-500/30 to-emerald-500/30 flex items-center justify-center">
+                            <i class="ri-task-line text-6xl text-green-400/50 group-hover:text-green-400 transition-colors"></i>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-dark/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-github-fill"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-external-link-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs px-2 py-1 rounded bg-green-500/10 text-green-400">Full-Stack</span>
+                            <span class="text-xs px-2 py-1 rounded bg-secondary/10 text-secondary">SaaS</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-green-400 transition-colors">TaskHub</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Project management SaaS with Kanban boards, time tracking, team collaboration, and automated workflow triggers.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-gray-500">Vue.js</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">Node.js</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">PostgreSQL</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden animate-on-scroll group" data-category="ml">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-purple-500/30 to-indigo-500/30 flex items-center justify-center">
+                            <i class="ri-camera-lens-line text-6xl text-purple-400/50 group-hover:text-purple-400 transition-colors"></i>
+                        </div>
+                        <div class="project-overlay absolute inset-0 bg-dark/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-github-fill"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors"><i class="ri-external-link-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-xs px-2 py-1 rounded bg-purple-500/10 text-purple-400">ML/AI</span>
+                            <span class="text-xs px-2 py-1 rounded bg-accent/10 text-accent">Computer Vision</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">VisionAPI</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Object detection and image classification API powered by custom-trained CNN models. Supports batch processing and streaming inference.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-gray-500">Python</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">TensorFlow</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">Docker</span>
+                            <span class="text-xs text-gray-500">•</span>
+                            <span class="text-xs text-gray-500">AWS SageMaker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 animate-on-scroll">
+                <p class="text-primary font-medium tracking-wider uppercase text-sm mb-3">What people say</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Testimonials</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-2xl p-8 animate-on-scroll hover:border-primary/40 transition-all duration-300">
+                    <div class="flex gap-1 mb-4">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">"Alex is one of the most talented engineers I've worked with. His ability to architect complex systems while maintaining code quality is remarkable."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">SM</div>
+                        <div>
+                            <p class="text-white font-medium text-sm">Sarah Mitchell</p>
+                            <p class="text-gray-500 text-xs">VP Engineering, Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 animate-on-scroll hover:border-secondary/40 transition-all duration-300">
+                    <div class="flex gap-1 mb-4">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">"Working with Alex transformed our development workflow. He built tools that saved our team hundreds of engineering hours per quarter."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold">JL</div>
+                        <div>
+                            <p class="text-white font-medium text-sm">James Liu</p>
+                            <p class="text-gray-500 text-xs">CTO, Stripe</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 animate-on-scroll hover:border-accent/40 transition-all duration-300">
+                    <div class="flex gap-1 mb-4">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <i class="ri-star-fill text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">"Alex's contributions to our search ranking algorithm directly impacted our bottom line. His data-driven approach and clean code are top-notch."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">EP</div>
+                        <div>
+                            <p class="text-white font-medium text-sm">Emily Park</p>
+                            <p class="text-gray-500 text-xs">Director of Product, Airbnb</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <p class="text-primary font-medium tracking-wider uppercase text-sm mb-3">Get in touch</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Contact <span class="gradient-text">Me</span></h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Have a project in mind or want to collaborate? I'd love to hear from you. Let's build something amazing together!</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8 animate-on-scroll from-left">
+                    <div class="glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-primary/40 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary text-2xl flex-shrink-0">
+                            <i class="ri-mail-line"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 text-sm">Email</p>
+                            <p class="text-white font-medium">acomputer9889@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-secondary/40 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary text-2xl flex-shrink-0">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 text-sm">Location</p>
+                            <p class="text-white font-medium">Babhan gawa babu, India</p>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-accent/40 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center text-accent text-2xl flex-shrink-0">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 text-sm">Phone</p>
+                            <p class="text-white font-medium">+91 9889670218</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <p class="text-gray-400 text-sm mb-4">Follow me on social media</p>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/Ak-Cyber24" class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/40 transition-all duration-300">
+                                <i class="ri-github-fill text-xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/abhishek9889/" class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/40 transition-all duration-300">
+                                <i class="ri-linkedin-fill text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/40 transition-all duration-300">
+                                <i class="ri-twitter-x-fill text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/40 transition-all duration-300">
+                                <i class="ri-dribbble-line text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="animate-on-scroll">
+                    <form class="glass-card rounded-2xl p-8 space-y-6" id="contactForm">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="text-sm font-medium text-gray-300 mb-2 block">First Name</label>
+                                <input type="text" placeholder="John" class="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all">
+                            </div>
+                            <div>
+                                <label class="text-sm font-medium text-gray-300 mb-2 block">Last Name</label>
+                                <input type="text" placeholder="Doe" class="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium text-gray-300 mb-2 block">Email</label>
+                            <input type="email" placeholder="example@gmail.com" class="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all">
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium text-gray-300 mb-2 block">Subject</label>
+                            <input type="text" placeholder="Project Collaboration" class="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all">
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium text-gray-300 mb-2 block">Message</label>
+                            <textarea rows="5" placeholder="Tell me about your project..." class="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2">
+                            <span>Send Message</span>
+                            <i class="ri-send-plane-fill"></i>
+                        </button>
+                    </form>
+                    <div id="formSuccess" class="hidden mt-4 glass-card rounded-2xl p-6 text-center border-green-500/30">
+                        <div class="text-3xl mb-2">✅</div>
+                        <p class="text-white font-medium">Message sent successfully!</p>
+                        <p class="text-gray-400 text-sm">I'll get back to you within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl font-bold gradient-text">AK</span>
+                    <span class="text-gray-500 text-sm">© 2026 ABHISHEK. All rights reserved.</span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="#home" class="text-gray-500 hover:text-primary transition-colors text-sm">Home</a>
+                    <a href="#about" class="text-gray-500 hover:text-primary transition-colors text-sm">About</a>
+                    <a href="#projects" class="text-gray-500 hover:text-primary transition-colors text-sm">Projects</a>
+                    <a href="#contact" class="text-gray-500 hover:text-primary transition-colors text-sm">Contact</a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="ri-github-fill"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="ri-twitter-x-fill"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full btn-primary text-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 z-40 shadow-lg">
+        <i class="ri-arrow-up-line text-xl"></i>
+    </button>
+    <script src="script.js"></script>
+</body>
+</html>
+
